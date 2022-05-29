@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@e-chan1007/eslint-config-vue": "^1.0.6",
+    "@monaco-editor/loader": "^1.3.2",
+    "monaco-editor": "^0.33.0",
+    "nuxt": "3.0.0-rc.3",
+    "sass": "^1.52.1",
+    "typescript": "^4.7.2"
+  },
+  "packageManager": "yarn@3.2.1"
+}

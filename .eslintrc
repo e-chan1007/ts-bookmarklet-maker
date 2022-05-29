@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "@e-chan1007/vue"
+  ]
+}
