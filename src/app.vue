@@ -51,7 +51,7 @@ const tsWorker = await monaco.languages.typescript.getTypeScriptWorker().then(ge
 const transpileMode = ref<"plain" | "trim" | "minify">("plain");
 const srcLanguage = ref<"javascript" | "typescript">("typescript");
 
-const jsCode = ref("");
+const jsCode = ref((await tsWorker.getEmitOutput(tsModel.uri.toString())).outputFiles[0].text);
 const jsUrl = ref("");
 
 tsModel.onDidChangeContent(async () => {
@@ -94,7 +94,7 @@ watch([jsCode, transpileMode], async () => {
     }
   }
   jsUrlModel.setValue(jsUrl.value);
-});
+}, { immediate: true });
 </script>
 
 <style lang="scss">
